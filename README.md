@@ -1,21 +1,12 @@
 # Darkweb Rulesets
+This is a in Dev Fork, which means, we make some patches, get ride of unused stuff and try to get it into Tor Bundle and Mozilla/Chrome Extension store.
 
 **Begin note:**
 ____
 
-This plugin is not up to date.
-Also with the coming mandatory extension signing in Firefox 42, this plugin can be consider finished. :(
-
-If you still want the rules, they can be found in the `rules/` directory.
-This is also where we will be adding any new HTTPS-Everywhere rulesets.
+This plugin is not up to date. But will be soon :-)
 
 Maybe one day these rules can be shipped with the tor browser bundle *wink* *wink*.
-
-
-**The good news** is that verifying services is still going!
-The [tor verification file](doc/EVIDENCE.md) and [i2p verification file](doc/EVIDENCE-i2p.md) should be vaild for the forseeable future.
-
-You can still manually use these rules by placing the rules in `rules/` into `Browser/TorBrowser/Data/Browser/profile.default/HTTPSEverywhereUserRules`.
 
 ____
 **End note**
@@ -120,9 +111,9 @@ And finally, thank you for using this software!
 [0]: https://www.eff.org/https-everywhere "HTTPS Everywhere"
 [1]: https://www.torproject.org/projects/torbrowser.html.en "The Tor Browser Bundle"
 [2]: https://www.youtube.com/watch?v=eAxBuckgPuU#t=17
-[3]: https://github.com/chris-barry/darkweb-everywhere/archive/master.zip
+[3]: https://github.com/alenan/darkweb-everywhere/archive/master.zip
 [4]: https://www.eff.org/https-everywhere/rulesets "HTTPS Everywhere Rulesets"
-[5]: https://github.com/chris-barry/darkweb-everywhere/releases
+[5]: https://github.com/alenan/darkweb-everywhere/releases
 [6]: about:addons
 [7]: https://trac.torproject.org/projects/tor/ticket/1670
 [8]: https://lists.torproject.org/pipermail/tor-talk/2014-February/032220.html
