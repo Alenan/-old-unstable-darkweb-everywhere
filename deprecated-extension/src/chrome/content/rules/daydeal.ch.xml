@@ -1,7 +1,0 @@
-<ruleset name="daydeal">
-	<target host="daydeal.ch"/>
-	<target host="www.daydeal.ch"/>
-
-	<rule from="^http://(?:www\.)?daydeal\.ch/"
-		to="https://www.daydeal.ch/"/>
-</ruleset>

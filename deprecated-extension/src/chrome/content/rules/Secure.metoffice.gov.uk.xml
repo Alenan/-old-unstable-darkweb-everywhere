@@ -1,5 +1,0 @@
-<ruleset name="Secure.metoffice.gov.uk (partial)">
-  <target host="secure.metoffice.gov.uk" />
-
-  <rule from="^http://secure\.metoffice\.gov\.uk/" to="https://secure.metoffice.gov.uk/" />
-</ruleset>

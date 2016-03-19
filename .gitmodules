@@ -1,3 +1,0 @@
-[submodule "addon-sdk"]
-	path = deprecated-extension/addon-sdk
-	url = https://github.com/mozilla/addon-sdk.git

@@ -1,9 +1,0 @@
-<ruleset name="loggly.com">
-
-	<target host="logs-01.loggly.com" />
-
-
-	<rule from="^http://logs-01\.loggly\.com/"
-		to="https://logs-01.loggly.com/" />
-
-</ruleset>
