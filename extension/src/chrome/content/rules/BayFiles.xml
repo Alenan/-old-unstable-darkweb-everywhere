@@ -1,0 +1,10 @@
+<ruleset name="BayFiles">
+
+	<target host="bayfiles.com" />
+	<target host="www.bayfiles.com" />
+
+
+	<rule from="^http://(?:www\.)?bayfiles\.com/"
+		to="https://bayfiles.net/" />
+
+</ruleset>

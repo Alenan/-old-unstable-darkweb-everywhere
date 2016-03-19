@@ -1,0 +1,35 @@
+<!--	!functional:
+		- faq			(refused)
+		- origin-dbcalc		(timeout)
+		- origin-ircalc		(ditto)
+		- origin-pe
+		- origin-postcalc	(timeout)
+		- ircalc		(Akamai, redirects to http)
+		- pe.usps		(ditto)
+		- postcalc		(ditto)
+
+
+	Fully covered subdomains:
+
+		- cns
+		- gateway
+		- sdc
+		- store
+
+-->
+<ruleset name="USPS">
+
+	<target host="usps.com"/>
+	<target host="*.usps.com"/>
+
+	<rule from="^http://usps\.com/"
+		to="https://www.usps.com/"/>
+
+	<securecookie host="^(.*\.)?usps\.com$" name=".*"/>
+
+	<!--	fast and gateway-cat are only useful for business
+		customers, but probably still worth listing here	-->
+	<rule from="^http://(about|cns|fast|gateway|gateway-cat|moversguide|sdc|shop|store|tools|www)\.usps\.com/"
+		to="https://$1.usps.com/"/>
+
+</ruleset>

@@ -1,0 +1,45 @@
+<!--
+	For rules causing false/broken MCB, see Outbrain.com-falsemixed.xml.
+
+	For problematic rules, see Outbrain-mismatches.xml.
+
+
+	Mixed content:
+
+		- css, on:
+
+			- www from www *
+
+		- Images, on:
+
+			- www from wp *
+			- www from www *
+
+		- Bugs on www from widgets *
+
+	* Secured by us
+
+-->
+<ruleset name="Outbrain (partial)">
+
+	<target host="outbrain.com" />
+	<target host="*.outbrain.com" />
+		<!--
+			Avoid false/broken MCB:
+						-->
+		<!--exclusion pattern="^http://blog\.outbrain\.com/" /-->
+		<exclusion pattern="^http://(?:www\.)?outbrain\.com/+(?!wp-content/|wp-includes/)" />
+
+
+	<securecookie host="^\w+\.outbrain\.com$" name=".*" />
+
+
+	<!--	Cert only matches *.outbrain.com	-->
+	<rule from="^https?://(?:www\.)?outbrain\.com/"
+		to="https://www.outbrain.com/" />
+
+	<!--	widgets: included on 3rd-party websites.	-->
+	<rule from="^http://(u|widgets|images|paid|traffic)\.outbrain\.com/"
+		to="https://$1.outbrain.com/" />
+
+</ruleset>

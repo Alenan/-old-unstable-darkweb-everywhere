@@ -1,0 +1,22 @@
+<!--
+	Nonfunctional domains:
+
+		- mirrors.creativecommons.org *
+
+	* Shows i
+
+-->
+<ruleset name="Creative Commons (partial)">
+
+	<target host="creativecommons.net" />
+	<target host="creativecommons.org" />
+	<target host="*.creativecommons.org" />
+
+
+	<rule from="^http://creativecommons\.net/"
+		to="https://creativecommons.net/" />
+
+	<rule from="^http://(i\.|api\.)?creativecommons\.org/"
+		to="https://$1creativecommons.org/" />
+
+</ruleset>

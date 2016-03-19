@@ -1,0 +1,62 @@
+<!--
+	There are lots of places where it doesn't work, so rather
+	than add lots of exclusions, I've only added added rules
+	for sections of the site that I know allow it.
+
+
+	Nonfunctional subdomains:
+
+		- blog
+		- press	(expired; 403)
+
+
+	Problematic domains:
+
+		- licdn.com subdomains:
+
+			- m.c.lnkd	(dropped)
+
+
+	Fully covered domains:
+
+		- static.licdn.com
+
+    LinkedIn users should also enable secure connections from:
+    - https://www.linkedin.com/settings/security-v2
+-->
+<ruleset name="LinkedIn (buggy)" default_off="unreliable">
+
+	<target host="static.licdn.com" />
+	<target host="linkedin.com" />
+	<target host="*.linkedin.com" />
+
+
+	<!--	Set by analytics/	-->
+	<securecookie host="^www\.linkedin\.com$" name="^(?:bcookie|L1e|X-LI-IDC)$" />
+
+
+	<rule from="^http://static\.licdn\.com/"
+		to="https://static.licdn.com/" />
+
+	<!--	- !www times out over https
+		- !www 301s to www over http
+						-->
+	<rule from="^http://(?:www\.)?linkedin\.com/$"
+		to="https://www.linkedin.com/" />
+
+	<!--	These paths redirect to http:
+
+			- groups?gid=\d+
+			- mpr$
+			- static?key=.+
+					-->
+	<rule from="^http://(?:www\.)?linkedin\.com/(analytics|company|home|media|profile|reg|scds|secure|settings|today|uas|ucds)([\?\/].*)?$"
+		to="https://www.linkedin.com/$1$2" />
+
+	<rule from="^http://(?:www\.)?linkedin\.com/(img/|reg/join|mpr/)"
+		to="https://www.linkedin.com/$1" />
+
+	<rule from="^http://platform\.linkedin\.com/"
+		to="https://platform.linkedin.com/" />
+
+</ruleset>

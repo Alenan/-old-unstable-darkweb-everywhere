@@ -1,0 +1,92 @@
+<!--
+	Other GitHub rulesets:
+
+		- Github-Pages.xml
+		- Guag.es.xml
+		- Speaker_Deck.com.xml
+
+
+	CDN buckets:
+
+		- github.global.ssl.fastly.net
+		- a248.e.akamai.net/assets.github.com/
+		- a248.e.akamai.net/camo.github.com/
+		- s3.amazonaws.com/github/ | d24z2fz21y4fag.cloudfront.net
+		- github.myshopify.com
+
+
+	Nonfunctional domains:
+
+		- shop.github.com	(redirects to http)
+
+
+	Problematic domains:
+
+		- support.github.com	(works; mismatched, CN: github.com)
+
+
+	Fully covered domains:
+
+		- github.com subdomains:
+
+			- (www.)
+			- assets\d+
+			- assets-cdn
+			- cloud		(→ bugs.genivi.org)
+			- f.cloud
+			- codeload
+			- developer
+			- eclipse
+			- enterprise
+			- gist
+			- help
+			- identicons
+			- jobs
+			- mac
+			- mobile
+			- nodeload
+			- octodex
+			- pages
+			- raw
+			- rg3
+			- shop
+			- status
+			- support	(→ ^github.com)
+			- training
+			- try
+			- wiki
+			- windows
+
+		- collector.githubapp.com
+
+		- githubusercontent.com
+
+-->
+<ruleset name="GitHub">
+
+	<target host="github.com" />
+	<target host="*.github.com" />
+	<target host="github.io" />
+	<target host="*.githubusercontent.com" />
+	<target host="collector.githubapp.com" />
+
+
+	<securecookie host="^(?:.*\.)?github\.com$" name=".+" />
+
+
+	<rule from="^http://((?:assets\d+|assets-cdn|f\.cloud|codeload|developer|eclipse|enterprise|gist|help|identicons|jobs|mac|mobile|nodeload|octodex|pages|raw|rg3|shop|status|support|training|try|wiki|windows|www)\.)?github\.com/"
+		to="https://$1github.com/" />
+
+	<rule from="^http://cloud\.github\.com/"
+		to="https://d24z2fz21y4fag.cloudfront.net/" />
+
+	<rule from="^http://collector\.githubapp\.com/"
+		to="https://collector.githubapp.com/" />
+
+	<rule from="^https?://github\.io/"
+		to="https://pages.github.com/" />
+
+	<rule from="^http://([^/@:\.]+)\.githubusercontent\.com/"
+		to="https://$1.githubusercontent.com/" />
+
+</ruleset>
