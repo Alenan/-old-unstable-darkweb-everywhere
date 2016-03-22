@@ -1,8 +1,14 @@
-HTTPS Everwyhere:
 Copyright © 2010-2012 Mike Perry <mikeperry@fscked.org>
                       Peter Eckersley <pde@eff.org>
                       and many others
                       (Licensed GPL v2+)
+
+Incorporating code from Alenan (Darkweb-everwhere fork),
+Copyright 2016 Alenan e.V. https://www.alenan.org
+Authors:
+  MuhPirat <muhpirat@alenan.org>
+Github repository: https://github.com/Alenan/darkweb-everywhere
+Licensed MIT
 
 Incorporating code from Darkweb-everwhere,
 Copyright 2014-2014 Darkweb Everywhere Project https://github.com/chris-barry/darkweb-everywhere
